@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Clean HTML</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#cleanhtml">Clean HTML</a></li>
+			<ul>
+				<li><a href="#separation">Separation of content and display</a></li>
+				<ul>
+					<li><a href="#use">Use of semantic elements</a></li>
+					<li><a href="#semantic">A few semantic elements in HTML5</a></li>
+					<li><a href="#semanticsample">Sample usage of semantic
+							elements</a></li>
+				</ul>
+			</ul>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#video">Video</a></li>
+		</ul>
+	</nav>
+	<article>
+		<h1 id="cleanhtml">Clean HTML</h1>
+		<h2 id="separation">Separation of content and display</h2>
+		<p>
+			HTML always had direct formatting features e.g. using the
+			<code>&lt;font&gt;</code>
+			element. But direct formatting was an obsolete idea even in the
+			twentieth century. With the advent of CSS we never need to use the
+			formatting elements so most of them were removed from HTML5. The
+			separation of content and display produces more readable and
+			maintainable code and also helps separate the roles in the
+			development process.
+		</p>
+		<h2 id="use">Use of semantic elements</h2>
+		<p>
+			Earlier HTML versions already had semantic elements like
+			<code>&lt;h1&gt;</code>
+			, but HTML5 focuses on semantic elements to get better
+			maintainability and to allow creation of accessible websites.
+		</p>
+		<h3 id="semantic">A few semantic elements in HTML5</h3>
+		<ul>
+			<li><code>&lt;h1&gt;..&lt;h6&gt;</code></li>
+			<li><code>&lt;p&gt;</code></li>
+			<li><code>&lt;header&gt;</code></li>
+			<li><code>&lt;footer&gt;</code></li>
+			<li><code>&lt;nav&gt;</code></li>
+			<li><code>&lt;section&gt;</code></li>
+			<li><code>&lt;article&gt;</code></li>
+			<li><code>&lt;figure&gt;</code></li>
+			<li><code>&lt;aside&gt;</code></li>
+			<li><code>&lt;details&gt;</code></li>
+			<li><code>&lt;summary&gt;</code></li>
+			<li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</code></li>
+		</ul>
+		<h3 id="semanticsample">Sample usage of semantic elements</h3>
+		<code>
+			<pre>&lt;dl&gt;
+&lt;dt&gt;Firefox&lt;/dt&gt;
+	&lt;dd&gt;A free, open source, cross­platform, graphical web browser
+		developed by the Mozilla Corporation and hundreds of volunteers.&lt;/dd&gt;
+	&lt;dd&gt;The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox,
+		is a mostly herbivorous mammal, slightly larger than a domestic cat
+		(60 cm long).&lt;/dd&gt;
+	&lt;!­­ other terms and definitions ­­&gt;
+&lt;/dl&gt;</pre>
+		</code>
+
+		<figcaption>
+			(Mozilla Contributors, <a
+				href="https://developer.mozilla.org/en­US/docs/Web/HTML/Element/dl">https://developer.mozilla.org/en­US/docs/Web/HTML/Element/dl</a>)
+		</figcaption>
+	</article>
+	<h1 id="contact">Contact</h1>
+	<form name="contact_form" method="post">
+		<input type="text" name="nickname" required
+			pattern="[a-zA-Z0-9_']{2,30}" maxlength="30" placeholder="Nickname"><br />
+		<input type="email" name="email" required placeholder="Email"><br />
+		<input type="url" name="url" placeholder="Website url"><br />
+		<textarea name="message" placeholder="Message..."></textarea><br />
+		<input type="submit" name="submit" value="Send data">
+	</form>
+	<h1 id="video">Video</h1>
+	<video src="BigBuckBunny_640x360.m4v" controls>
+		<source src="BigBuckBunny_320x180.mp4" type="video/mp4">
+	</video>
+	<footer>
+		Made by Peter Horvath (<a href="http://www.epam.com">www.epam.com</a>)
+	</footer>
+</body>
+</html>
