@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Clean HTML</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 	<nav>
@@ -19,6 +20,7 @@
 			</ul>
 			<li><a href="#contact">Contact</a></li>
 			<li><a href="#video">Video</a></li>
+			<li><a href="#cssgrid">CSS Grid</a></li>
 		</ul>
 	</nav>
 	<article>
@@ -74,19 +76,80 @@
 				href="https://developer.mozilla.org/en­US/docs/Web/HTML/Element/dl">https://developer.mozilla.org/en­US/docs/Web/HTML/Element/dl</a>)
 		</figcaption>
 	</article>
-	<h1 id="contact">Contact</h1>
-	<form name="contact_form" method="post">
-		<input type="text" name="nickname" required
-			pattern="[a-zA-Z0-9_']{2,30}" maxlength="30" placeholder="Nickname"><br />
-		<input type="email" name="email" required placeholder="Email"><br />
-		<input type="url" name="url" placeholder="Website url"><br />
-		<textarea name="message" placeholder="Message..."></textarea><br />
-		<input type="submit" name="submit" value="Send data">
-	</form>
-	<h1 id="video">Video</h1>
-	<video src="BigBuckBunny_640x360.m4v" controls>
-		<source src="BigBuckBunny_320x180.mp4" type="video/mp4">
-	</video>
+	<article id="contact">
+		<h1>Contact</h1>
+		<form name="contact_form" method="post">
+			<input type="text" name="nickname" required
+				pattern="[a-zA-Z0-9_']{2,30}" maxlength="30" placeholder="Nickname">
+			<input type="email" name="email" required placeholder="Email">
+			<input type="url" name="url" placeholder="Website url">
+			<textarea name="message" placeholder="Message..."></textarea>
+			<input type="submit" name="submit" value="Send data">
+		</form>
+	</article>
+	<article id="video">
+		<h1>Video</h1>
+		<video src="BigBuckBunny_640x360.m4v" controls>
+			<source src="BigBuckBunny_320x180.mp4" type="video/mp4">
+		</video>
+	</article>
+	<article id="cssgrid">
+		<h2>A Simple responsive grid</h2>
+		<div class="grid">
+			<section class="cell">
+				<h3>1</h3>
+				This is a simple responsive grid implemented purely in CSS. Unlike
+				commonly used grid frameworks we do not define a lot of width
+				classes like
+				<code>col_1_3</code>
+				,
+				<code>col_1_4</code>
+				etc.
+			</section>
+			<section class="cell">
+				<h3>2</h3>
+				The only width class defined for this grid is
+				<code>cell</code>
+				. Add this class to your divs, sections or other elements and embed
+				them in a
+				<code>.grid</code>
+				Element to set up the grid.
+			</section>
+		</div>
+		<div class="grid">
+			<section class="cell">
+				<h3>3</h3>
+				<p>The grid is displayed in a 2 column layout if the screenwidth
+					is at least 34em. If the screen is narrower then the grid will fall
+					back to 1­column display.</p>
+				<p>Although not impossible to implement, A CSS grid usually is
+					only 1 row tall. You have to start a new grid for every row. This
+					also means that the flow of cells is different from what you may
+					expect in a 2­column text. This grid was not designed for
+					displaying text but for page layout.</p>
+				<p>
+					You can implement this grid with
+					<code>float</code>
+					or with
+					<code>display: inline­block</code>
+				</p>
+			</section>
+			<section class="cell">
+				<h3>4</h3>
+				<div class="grid">
+					<div class="cell">There is also limited support for nesting
+						cells. Nested layout breaks earlier to 1­column to avoid too
+						narrow columns.</div>
+					<div class="cell">This behavior is also defined using media
+						queries. This has some drawbacks but there is no better method.</div>
+				</div>
+				<div class="grid">
+					<div class="cell">Resize the browser window gradually and
+						check how the layout changes!</div>
+				</div>
+			</section>
+		</div>
+	</article>
 	<footer>
 		Made by Peter Horvath (<a href="http://www.epam.com">www.epam.com</a>)
 	</footer>
