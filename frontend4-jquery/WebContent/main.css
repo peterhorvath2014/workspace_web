@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: arial;
+}
+
+input:invalid, textarea:invalid {
+	background-color: #f0d0d0;
+}
+
+li {
+	margin-top: 10px;
+}

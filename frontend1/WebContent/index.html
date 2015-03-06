@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="Description" content="A simple HTML5 tutorial created as a lab on EPAM Academy">
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/> 
+<title>An HTML tutorial for Java developers</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#cleanhtml">Clean HTML</a>
+				<ul>
+					<li><a href="#sepofcontent">Separation of content and
+							display</a></li>
+					<li><a href="#useofsemantics">Use of semantic elements</a></li>
+				</ul></li>
+			<li><a href="#formsample">Form Example</a></li>
+		</ul>
+	</nav>
+	<article id="cleanhtml">
+		<h2>Clean HTML</h2>
+		<h3 id="sepofcontent">Separation of content and display</h3>
+		<p>
+			HTML always had direct formatting features e.g. using the
+			<code>&lt;font&gt;</code>
+			element. But direct formatting was an obsolete idea even in the
+			twentieth century. With the advent of CSS we never need to use the
+			formatting elements so most of them were removed from HTML5. The
+			separation of content and display produces more readable and
+			maintainable code and also helps separate the roles in the
+			development process.
+		</p>
+		<h3 id="useofsemantics">Use of semantic elements</h3>
+		<p>
+			Earlier HTML versions already had semantic elements like
+			<code>&lt;h1&gt;</code>
+			, but HTML5 focuses on the semantic elements to get better
+			maintainability and to allow creation of accessible websites.
+		</p>
+		<h3>A few semantic elements in HTML5</h3>
+		<ul>
+			<li><code>&lt;h1&gt;..&lt;h6&gt;</code></li>
+			<li><code>&lt;p&gt;</code></li>
+			<li><code>&lt;header&gt;</code></li>
+			<li><code>&lt;footer&gt;</code></li>
+			<li><code>&lt;nav&gt;</code></li>
+			<li><code>&lt;section&gt;</code></li>
+			<li><code>&lt;article&gt;</code></li>
+			<li><code>&lt;aside&gt;</code></li>
+			<li><code>&lt;details&gt;</code></li>
+			<li><code>&lt;summary&gt;</code></li>
+			<li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</code></li>
+		</ul>
+		<h3>Sample usage of semantic elements</h3>
+		<figure>
+			<pre>
+			<code>
+&lt;dl&gt;
+&lt;dt&gt;Firefox&lt;/dt&gt;
+  &lt;dd&gt;A free, open source, cross-platform, graphical web browser
+  	developed by the Mozilla Corporation and hundreds of volunteers.&lt;/dd&gt;
+  &lt;dd&gt;The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox,
+  	is a mostly herbivorous mammal, slightly larger than a domestic cat
+  	(60 cm long).&lt;/dd&gt;
+ 
+  &lt;!-- other terms and definitions --&gt;
+&lt;/dl&gt;
+			</code>
+		</pre>
+			<figcaption>
+				(Mozilla Contributors, <a
+					href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"
+					target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl</a>
+				)
+			</figcaption>
+		</figure>
+	</article>
+	<article id="formsample">
+		<h2>Contact us - Form Example</h2>
+		<form action="">
+			<input type="text" name="nickname" placeholder="Your Nickname" required pattern="[a-z][\w']+" maxlength="30" title="You can use the latin alphabet, numbers, underscore and apostrophe">
+			<input type="email" name="email" placeholder="E-Mail" required>
+			<input type="url" name="url" placeholder="your website">
+			<textarea rows="4" name="message" placeholder="Your message goes here" required></textarea>
+			<input type="submit" value="Send">
+		</form>
+	</article>
+
+	<footer>
+		Created by Krisztián Schäffer for EPAM Academy. <a target="_blank"
+			href="http://www.epam.com">www.epam.com</a>
+	</footer>
+</body>
+</html>

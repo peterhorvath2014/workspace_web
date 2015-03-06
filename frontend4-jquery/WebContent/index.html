@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/> 
+<meta charset="UTF-8">
+<title>Questionnaire Editor using jQuery</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script src="jquery-1.11.1.min.js"></script>
+<script src="questionnaire.js"></script>
+<script src="render.js"></script>
+<script src="formstate.js"></script>
+</head>
+<body>
+	<div id="questionnaire1" class="questionnaire">
+		<ol>
+			<li class="question">
+				<div class="questiontext">
+					<input placeholder="Question Text" name="questiontext">
+				</div>
+				<div class="answer">
+					<input placeholder="Possible Answer"><a href="" class="deleteanswer">X</a>
+				</div>
+				<button class="newanswer">Add Answer</button>
+			</li>
+		</ol>
+		<button class="newquestion">Add Question</button>
+		<div>
+			<button class="printrender">Print</button>
+			<button class="downloadrender">Download</button>
+			<button class="save">Save State</button>
+			<button class="clear">Clear</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+.cell {
+	display: inline-block;
+	width: 100%;
+	padding: 5pt;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 34em) {
+	.cell {
+		width: 49.5%;
+	}
+}
+
+@media screen and (max-width: 68em) {
+	.cell .cell {
+		width: 100%;
+	}
+}

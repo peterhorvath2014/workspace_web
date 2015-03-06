@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.thumbnail {
+	float: left;
+	width: 100px;
+	height: 90px;
+	margin: 5px;
+}
+
+.text_line {
+	clear: both;
+	border: 5px solid;
+	background-color: yellow;
+	border-radius: 20px;
+}
+
+.auto {
+	float: none;
+	margin: 0 auto;
+	width: 200px;
+	display: block;
+}
+</style>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.thumbnail').click(function(event) {
+			$(this).parent().children().filter("figure:nth-child(2n)").css("border", "5px solid red");
+		});
+	});
+</script>
+</head>
+<body>
+	<img class="thumbnail" src="HTML5_logo_and_wordmark.svg">
+
+	<p>Mellé folyik. This is text sfdgdfg dhg gh fgh frg h hsdfgfdg df
+		hg dfhg gh g dfg fd gfdgfodighfuidoig</p>
+	<div>
+		<span class="text_line" style="display: block; width: 150px">SPAN
+			This is text sfdgdfg dhg gh fgh frg h hsdfgfdg df hg dfhg gh g dfg fd
+			gfdgfodighfuidoig</span>
+		<figure class="thumbnail">
+			<img src="HTML5_logo_and_wordmark.svg">
+			<figcaption>izeke</figcaption>
+		</figure>
+		<figure class="thumbnail">
+			<img src="HTML5_logo_and_wordmark.svg">
+			<figcaption>izeke</figcaption>
+		</figure>
+		<figure class="thumbnail">
+			<img src="HTML5_logo_and_wordmark.svg">
+			<figcaption class="prb">izeke</figcaption>
+		</figure>
+		<figure class="thumbnail">
+			<img src="HTML5_logo_and_wordmark.svg">
+			<figcaption>izeke</figcaption>
+		</figure>
+		<figure class="thumbnail">
+			<img src="HTML5_logo_and_wordmark.svg">
+			<figcaption>izeke</figcaption>
+		</figure>
+		<figure class="thumbnail">
+			<img src="HTML5_logo_and_wordmark.svg">
+			<figcaption>izeke</figcaption>
+		</figure>
+
+	</div>
+	<p class="text_line">This is text</p>
+
+	<img class="auto" src="HTML5_logo_and_wordmark.svg">
+</body>
+</html>

@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+.grid::after {
+  content: "";
+  display: block;
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+.cell {
+	display: block;
+	float: left;
+	margin: 1% 0 1% 1.6%;
+	width: 100%;
+}
+
+@media screen and (min-width: 34em) {
+	.cell {
+		width: 48%;
+	}
+}
+
+@media screen and (max-width: 68em) {
+	.cell .cell {
+		width: 100%;
+	}
+}

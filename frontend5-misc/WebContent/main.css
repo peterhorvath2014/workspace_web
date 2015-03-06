@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: arial;
+	margin: 0;
+}
+
+nav > ul li {
+	display:inline;
+}
+
+nav > ul ul {
+	display: none;
+}
+
+input {
+	display: block;
+}
+
+input:invalid, textarea:invalid {
+	background-color: #f0d0d0;
+}
+
+article {
+	padding: 10pt;
+}
+
+article:nth-of-type(odd) {
+	background-color: #e0e0e0;
+}

@@ -3,7 +3,7 @@
 @media print {
 	nav {
 		display: none;
-	}	
+	}
 }
 
 html {
@@ -34,11 +34,37 @@ article:nth-child(odd) {
 input:invalid {
 	background-color: #f0d0d0;
 }
+
 input {
 	display: block;
 	margin-bottom: 20px;
 }
 
-.grid {
-	display: inline-block;
+.cell {
+	float: left;
+	width: 48%;
+	padding-right: 2%;
+}
+
+@media screen and (max-width: 64em) {
+	.cell {
+		width: 100%;
+		float: none;
+	}
+	.cell>.grid>.cell {
+		float: left;
+		width: 48%;
+		padding-right: 2%;
+	}
+}
+
+@media screen and (max-width: 32em) {
+	.cell {
+		width: 100%;
+		float: none;
+	}
+}
+
+footer {
+	clear: both;
 }

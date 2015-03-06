@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="x-ua-compatible" content="IE=Edge"/> 
+<meta charset="UTF-8">
+<title>An HTML tutorial for Java developers</title>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="grid.css">
+<script src="mandelbrot.js"></script>
+<script src="mandelui.js"></script>
+</head>
+<body onload="">
+	<nav>
+		<ul>
+			<li><a href="#cleanhtml">Clean HTML</a>
+				<ul>
+					<li><a href="#sepofcontent">Separation of content and
+							display</a></li>
+					<li><a href="#useofsemantics">Use of semantic elements</a></li>
+				</ul></li>
+			<li><a href="#formsample">Form Example</a></li>
+			<li><a href="#cssgrid">A Simple responsive grid</a></li>
+		</ul>
+	</nav>
+	<article id="cleanhtml">
+		<h2>Clean HTML</h2>
+		<h3 id="sepofcontent">Separation of content and display</h3>
+		<p>
+			HTML always had direct formatting features e.g. using the
+			<code>&lt;font&gt;</code>
+			element. But direct formatting was an obsolete idea even in the
+			twentieth century. With the advent of CSS we never need to use the
+			formatting elements so most of them were removed from HTML5. The
+			separation of content and display produces more readable and
+			maintainable code and also helps separate the roles in the
+			development process.
+		</p>
+		<h3 id="useofsemantics">Use of semantic elements</h3>
+		<p>
+			Earlier HTML versions already had semantic elements like
+			<code>&lt;h1&gt;</code>
+			, but HTML5 focuses on the semantic elements to get better
+			maintainability and to allow creation of accessible websites.
+		</p>
+		<h3>A few semantic elements in HTML5</h3>
+		<ul>
+			<li><code>&lt;h1&gt;..&lt;h6&gt;</code></li>
+			<li><code>&lt;p&gt;</code></li>
+			<li><code>&lt;header&gt;</code></li>
+			<li><code>&lt;footer&gt;</code></li>
+			<li><code>&lt;nav&gt;</code></li>
+			<li><code>&lt;section&gt;</code></li>
+			<li><code>&lt;article&gt;</code></li>
+			<li><code>&lt;aside&gt;</code></li>
+			<li><code>&lt;details&gt;</code></li>
+			<li><code>&lt;summary&gt;</code></li>
+			<li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt;</code></li>
+		</ul>
+		<h3>Sample usage of semantic elements</h3>
+		<figure>
+			<pre>
+			<code>
+&lt;dl&gt;
+&lt;dt&gt;Firefox&lt;/dt&gt;
+  &lt;dd&gt;A free, open source, cross-platform, graphical web browser
+  	developed by the Mozilla Corporation and hundreds of volunteers.&lt;/dd&gt;
+  &lt;dd&gt;The Red Panda also known as the Lesser Panda, Wah, Bear Cat or Firefox,
+  	is a mostly herbivorous mammal, slightly larger than a domestic cat
+  	(60 cm long).&lt;/dd&gt;
+ 
+  &lt;!-- other terms and definitions --&gt;
+&lt;/dl&gt;
+			</code>
+		</pre>
+			<figcaption>
+				(Mozilla Contributors, <a
+					href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"
+					target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl</a>
+				)
+			</figcaption>
+		</figure>
+	</article>
+	
+	<article id="formsample">
+		<h2>Contact us - Form Example</h2>
+		<form action="">
+			<input type="text" name="nickname" placeholder="Your Nickname" required pattern="[a-z][\w'][\w']*" maxlength="30" title="You can use the latin alphabet, numbers, underscore and apostrophe">
+			<input type="email" name="email" placeholder="E-Mail" required>
+			<input type="url" name="url" placeholder="your website">
+			<textarea rows="4" name="message" placeholder="Your message goes here" required></textarea>
+			<input type="submit" value="Send">
+		</form>
+	</article>
+	
+	<article id="cssgrid">
+		<h2>A Simple responsive grid</h2>
+		<section class="cell">
+			<h3>1</h3>
+			This is a simple responsive grid implemented purely in CSS. Unlike commonly used grid frameworks we do not define
+			a lot of width classes like <code>col_1_3</code>, <code>col_1_4</code> etc.
+		</section>
+		<section class="cell">
+			<h3>2</h3>
+			The only class defined for this grid is <code>cell</code>. Add this class to your divs, sections or other elements to set up the grid.
+		</section>
+		<section class="cell">
+			<h3>3</h3>
+			<p>The grid is displayed in a 2 column layout if the screen width is at least 34em. If the screen is narrower then the grid will fall back to
+			1-column display.</p>
+			<p>Please note that the flow of cells is different from what you may expect in a 2-column text. This grid was not designed for displaying text but
+			for page layout.</p>
+		</section>
+		<section class="cell">
+			<h3>4</h3>
+			<div class="cell">There is also limited support for nesting cells. Nested layout breaks earlier to 1-column to avoid too narrow columns.</div>
+			<div class="cell">This behavior is also defined using media queries. This has some drawbacks but there is no better method.</div>
+			<div class="cell">Resize the browser window gradually and check how the layout changes!</div>
+		</section>
+	</article>
+	<article id="mandelbrot">
+	    <h1>Mandelbrot set</h1>
+ 
+    <form id="calcdata" onsubmit="javascript:Mandelbrot(); return false;">
+      <table>
+          <tr>
+            <td>xmin =</td>
+            <td><input name="xmin" type="text" size="10" value="-2"></td>
+            <td>xmax =</td>
+            <td><input name="xmax" type="text" size="10" value="1"></td>
+          </tr>
+          <tr>
+            <td>ymin =</td>
+            <td><input name="ymin" type="text" size="10" value="-1"></td>
+            <td>ymax =</td>
+            <td><input name="ymax" type="text" size="10" value="1"></td>
+          </tr>
+      </table>
+      <p>iterations =
+        <input name="iterations" type="text" size="10" value="1000"></p>
+      <p>
+        <input type="submit" value=" Calculate ">
+        <input type="reset" value=" Reset form ">
+      </p>
+    </form>
+ 
+    <canvas id="mandelimage" width="900" height="600">
+      This page needs a browser with canvas support.
+    </canvas>
+	</article>
+
+	<footer>
+		Created by Krisztián Schäffer for EPAM Academy. <a target="_blank"
+			href="http://www.epam.com">www.epam.com</a>
+	</footer>
+</body>
+</html>
