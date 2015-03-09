@@ -2,8 +2,8 @@
 window.Star = (function () {
   "use strict";
 
-  function Star(x, y) {
-    SpaceObject.call(this, x, y, 0, 0);
+  function Star(coordinate) {
+    SpaceObject.call(this, coordinate, new Coordinate(0,0));
   }
 
   Star.prototype = new SpaceObject();

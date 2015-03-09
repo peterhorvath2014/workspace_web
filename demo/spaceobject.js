@@ -1,16 +1,14 @@
 window.SpaceObject = (function () {
   "use strict";
 
-  function SpaceObject(x, y, vx, vy) {
-    this.x = x;
-    this.y = y;
-    this.vx = vx;
-    this.vy = vy;
+  function SpaceObject(coordinate, vCoordinate) {
+    this.coordinate = coordinate;
+    this.vCoordinate = vCoordinate;
   }
 
   SpaceObject.prototype.oneStep = function () {
-    this.x += this.vx;
-    this.y += this.vy;
+    this.coordinate.x += this.vCoordinate.x;
+    this.coordinate.y += this.vCoordinate.y;
   };
 
   return SpaceObject;

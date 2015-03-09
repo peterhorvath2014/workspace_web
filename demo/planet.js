@@ -2,8 +2,8 @@
 window.Planet = (function () {
   "use strict";
 
-  function Planet(x, y, vx, vy, star) {
-    SpaceObject.call(this, x, y, vx, vy);
+  function Planet(coordinate, vCoordinate, star) {
+    SpaceObject.call(this, coordinate, vCoordinate);
     this.star = star;
   }
   Planet.prototype = new SpaceObject();

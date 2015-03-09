@@ -4,8 +4,8 @@ window.Simulation = (function () {
 
   function Simulation(fps) {
     GameEngine.call(this, fps);
-    this.star = new Star(400, 300);
-    this.planet = new Planet(600, 300, 0, 1, this.star);
+    this.star = new Star(new Coordinate(400, 300));
+    this.planet = new Planet(new Coordinate(600, 300), new Coordinate(0, 1), this.star);
   }
 
   Simulation.prototype = new GameEngine();
@@ -18,8 +18,8 @@ window.Simulation = (function () {
 
   Simulation.prototype.updateScene = function () {
     var planetDiv = document.querySelector(".spaceobject");
-    planetDiv.style.top = this.planet.y + "px";
-    planetDiv.style.left = this.planet.x + "px";
+    planetDiv.style.top = this.planet.coordinate.y + "px";
+    planetDiv.style.left = this.planet.coordinate.x + "px";
   };
 
 
