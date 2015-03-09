@@ -18,9 +18,5 @@ window.Vector = (function() {
 		return Math.sqrt(Math.pow(xDiff, 2) + Math.pow(yDiff, 2));
 	}
 
-	Vector.prototype.force = function force(another) {
-		return 500 / Math.pow(this.distance(another), 2);
-	}
-	
 	return Vector;
 }());

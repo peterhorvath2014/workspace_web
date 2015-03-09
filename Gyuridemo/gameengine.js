@@ -4,13 +4,7 @@ window.GameEngine = (function () {
 
   function GameEngine(fps) {
     this.fps = fps || 20;
-    this.renderer = null;
   }
-
-  GameEngine.prototype.setRenderer = function (renderer) {
-    this.renderer = renderer;
-    this.renderer.setUpScene();
-  };
 
   GameEngine.prototype.start = function () {
     var gameEngine = this;
@@ -20,9 +14,7 @@ window.GameEngine = (function () {
   };
 
   GameEngine.prototype.oneStep = function () {
-    if (this.renderer) {
-      this.renderer.updateScene();
-    }
+    console.log("GameEngine.oneStep");
   };
 
   return GameEngine;
