@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="jquery-1.11.2.min.js"></script>
+    <script src="questionnaire.js"></script>
+</head>
+
+<body>
+    <div id="questionnaire" class="questionnaire">
+        <ol>
+            <li class="question" id="question">
+                <div class="questiontext">
+                    <input type="text" name="questiontext" placeholder="Type a question here...">
+                </div>
+                <div class="answertext">
+                    <input type="text" name="answertext" placeholder="Type an answer here...">
+                </div>
+                <div class="addnextanswerbutton">
+                    <input type="button" id="addNextAnswerButton" value="Add next answer">
+                </div>
+            </li>
+        </ol>
+        <div class="addnextquestionbutton">
+            <input type="button" id="addNextQuestionButton" value="Add next question">
+        </div>
+    </div>
+
+</body>
+
+</html>
